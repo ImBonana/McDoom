@@ -1,0 +1,47 @@
+# gradle
+
+.gradle/
+build/
+out/
+classes/
+
+common/build
+common/.gradle
+fabric/build
+fabric/.gradle
+neoforge/build
+neoforge/.gradle
+
+# eclipse
+
+*.launch
+
+# idea
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# vscode
+
+.settings/
+.vscode/
+bin/
+.classpath
+.project
+
+# macos
+
+*.DS_Store
+
+# Mod loaders
+fabric/run
+neoforge/run
+
+# java
+
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr

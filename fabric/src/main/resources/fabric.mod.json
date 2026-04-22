@@ -1,0 +1,33 @@
+{
+    "schemaVersion": 1,
+    "id": "${mod_id}",
+    "version": "${version}",
+    "name": "ModTemplate",
+    "description": "Mod Template",
+    "authors": [
+        "ImBanana"
+    ],
+    "contact": {
+        "homepage": "https://modrinth.com/project/${modrinth_id}"
+    },
+    "license": "MIT",
+    "icon": "assets/${mod_id}/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "me.imbanana.modtemplate.fabric.ModtemplateFabric"
+        ],
+        "client": [
+            "me.imbanana.modtemplate.fabric.client.ModtemplateFabricClient"
+        ]
+    },
+    "mixins": [
+        "${mod_id}.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": "${loader_version_range}",
+        "minecraft": "${mc_version_range}",
+        "java": ">=25",
+        "fabric-api": "*"
+    }
+}
