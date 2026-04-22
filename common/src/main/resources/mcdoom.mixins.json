@@ -1,12 +1,13 @@
 {
     "required": true,
-    "package": "me.imbanana.modtemplate.mixin",
+    "package": "me.imbanana.mcdoom.mixin",
     "compatibilityLevel": "JAVA_25",
     "minVersion": "0.8",
     "mixinextras": {
         "minVersion": "0.5.0"
     },
     "client": [
+        "PauseScreenMixin"
     ],
     "mixins": [
     ],
