@@ -2,7 +2,7 @@ plugins {
     id 'dev.architectury.loom' version "$loom_version" apply false
     id 'architectury-plugin' version "$architectury_plugin_version"
     id 'com.gradleup.shadow' version '8.3.6' apply false
-    id "com.modrinth.minotaur" version "2.+"
+    id "com.modrinth.minotaur" version "2.+" apply false
 }
 
 architectury {
@@ -80,6 +80,8 @@ subprojects {
         exclude "architectury.common.json"
         from rootProject.file("LICENSE")
     }
+
+    assemble.dependsOn shadowJar
 
     def loader = project.name;
     if (project.enabled_platforms.split(",").contains(loader)) {

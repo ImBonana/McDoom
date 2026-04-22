@@ -21,6 +21,14 @@ dependencies {
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
 }
 
+sourceSets {
+    main {
+        resources {
+            srcDir project(":common").sourceSets.main.resources
+        }
+    }
+}
+
 processResources {
     inputs.property 'version', project.version
     inputs.property 'mod_id', project.mod_id
