@@ -66,6 +66,12 @@ subprojects {
         }
     }
 
+    processResources {
+        from("${rootProject.projectDir}/native/build") {
+            into "natives"
+        }
+    }
+
     jar {
         archiveClassifier = "raw"
     }

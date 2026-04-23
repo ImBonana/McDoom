@@ -1,7 +1,9 @@
 package me.imbanana.mcdoom.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
+import me.imbanana.mcdoom.DoomScreen;
 import me.imbanana.mcdoom.McDoom;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.layouts.GridLayout;
 import net.minecraft.client.gui.screens.PauseScreen;
@@ -36,6 +38,7 @@ public abstract class PauseScreenMixin extends Screen {
                 button -> {
                     button.active = false;
                     McDoom.LOGGER.info("Starting DOOM");
+                    Minecraft.getInstance().setScreen(new DoomScreen());
                 }
             )
             .width(204)
